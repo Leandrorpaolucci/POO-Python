@@ -1,11 +1,21 @@
-class P():
+class Veiculo():
+    def __init__(self):
+        pass
+
+class Carro(Veiculo):
+    def __init__(self):
+        super(Carro, self).__init__()
+
+class Trem(Veiculo):
     pass
 
-p = P()
+class CarroTrem(Carro, Trem):
+    pass
 
-P.__mro__
 
-
+print(Veiculo.__mro__)
+print(Carro.__mro__)
+print(CarroTrem.__mro__)
 
 
 
