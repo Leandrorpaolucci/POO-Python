@@ -30,7 +30,7 @@ class ContaCorrente():
     def depositar(self, valor):
         self.saldo_anterior = self.saldo  # Atualiza o saldo anterior antes do depósito
         self.saldo += valor
-        return f'Olá {self.nome}, você depositou R$ {valor:.2f}.\nSaldo atual: R$ {self.saldo:.2f}'
+        return f'Olá {self.nome}, você depositou R$ {valor:.2f} R$.\nSaldo atual: R$ {self.saldo:.2f} R$.'
 
     def sacar_dinheiro(self, valor):
         self.saldo_anterior = self.saldo  # Armazena o saldo antes do saque
@@ -38,7 +38,7 @@ class ContaCorrente():
             return f"Você não possui saldo suficiente para sacar o valor desejado.\nSeu saldo atual é de R$ {self.saldo:.2f}."
         else:
             self.saldo -= valor
-            return f'Olá {self.nome}, você sacou R$ {valor:.2f}\nSaldo atual: R$ {self.saldo:.2f}'
+            return f'Olá {self.nome}, VOCÊ UTILIZOU A FUNÇÃO SAQUE NO VALOR DE: R$ {valor:.2f} R$\nSaldo atual: R$ {self.saldo:.2f} R$.'
 
     def verificar_saldo_negativo(self):
         if self.saldo_anterior < 0:
@@ -72,7 +72,7 @@ print(f'SALDO: {pessoa_1.saldo}')
 print("=======================EXTRATO FINAL===================================")
 print(f'Saldo Atual: {pessoa_1.saldo}')
 print(f'Saldo Anterior: {pessoa_1.saldo_anterior}')
-print(pessoa_1.sacar_dinheiro(2400))
+print(pessoa_1.sacar_dinheiro(1700))
 print(pessoa_1.sacar_dinheiro(5))
 print(pessoa_1.notificar_limite_lis())
 print(pessoa_1.calcular_porcentagem_uso_lis())
